@@ -6,17 +6,13 @@ This project detects fake news by analyzing both text and images using deep lear
 
 ## Scripts
 
-### 1. **`download_images.py`**
 
-This script downloads images from URLs in the dataset, checks for corruption, and saves the cleaned data in a new CSV file.
-
-
-### 2. **`image_captioning_and_embedding.py`**
+### 1. **`image_captioning_and_embedding.py`**
 
 Generates captions for images using the BLIP model, extracts GloVe word embeddings, and computes sentence-level embeddings for the captions. Results are saved as CSV and NumPy files.
 
 
-### 3. **`train_early_fusion_bert.py`**
+### 2. **`train_early_fusion_bert.py`**
 
 Trains a multimodal classifier using BERT embeddings for both text and image captions, evaluates the model, and plots the training/validation metrics.
 
