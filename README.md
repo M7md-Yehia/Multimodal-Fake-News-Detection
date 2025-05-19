@@ -1,5 +1,3 @@
-Got it! Here's an updated version of your README with a more concise and **English** version, without detailing each file’s functionality:
-
 ---
 
 # Multimodal Fake News Detection
