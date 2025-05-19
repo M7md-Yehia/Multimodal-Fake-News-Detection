@@ -58,5 +58,26 @@ This script performs the following steps:
 
 Run this script in a Google Colab environment or any environment with access to the datasets and required libraries.
 
+## Early Fusion BERT Classifier Training
+
+This script trains an early fusion multimodal classifier using BERT embeddings on both news text and image captions. It:
+
+- Loads a merged dataset CSV with text, captions, and labels.
+- Preprocesses and splits data into training and validation sets.
+- Tokenizes text and captions using BERT tokenizer.
+- Implements a PyTorch Dataset and DataLoader for batching.
+- Defines an early fusion model that concatenates BERT embeddings of text and captions.
+- Trains the model using binary cross-entropy loss.
+- Evaluates on validation data.
+- Plots training/validation accuracy and loss.
+
+**Usage:**
+
+Run this script in an environment with PyTorch and Transformers installed:
+
+```bash
+python train_early_fusion_bert.py
+
+
 ```bash
 python image_captioning_and_embedding.py
