@@ -30,6 +30,5 @@ We utilize the [BLIP (Bootstrapping Language-Image Pre-training)](https://github
 ### Word Embedding  
 For word embeddings, we use the pre-trained [GloVe 840B 300d vectors](https://github.com/stanfordnlp/GloVe).  
 Due to the large size and processing time of the GloVe embeddings, we provide precomputed word maps and embedding results [here](https://drive.google.com/drive/folders/1tn7GA8WL9sF6mHD9k5CLx06Cr6EOspXs?usp=sharing).  
-Please refer to the **embedding** branch for modified code related to embedding computations.
 
 ---
