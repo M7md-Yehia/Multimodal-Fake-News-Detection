@@ -29,7 +29,6 @@ We utilize the [BLIP (Bootstrapping Language-Image Pre-training)](https://github
 
 ### Word Embedding  
 For word embeddings, we use the pre-trained [GloVe 840B 300d vectors](https://github.com/stanfordnlp/GloVe).  
-To efficiently compute sentence embeddings, we employ the [Smooth Inverse Frequency (SIF)](https://github.com/PrincetonML/SIF) method.  
 Due to the large size and processing time of the GloVe embeddings, we provide precomputed word maps and embedding results [here](https://drive.google.com/drive/folders/1yJSwmx7kpmEHvJ5OTt5mdF9FtFxs4Mqd?usp=sharing).  
 Please refer to the **embedding** branch for modified code related to embedding computations.
 
