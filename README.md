@@ -16,7 +16,7 @@ Detect fake news by analyzing both text and images using deep learning technique
 
 ```bash
 python scripts/download_images.py
-
+```
 
 ## Resources
 
