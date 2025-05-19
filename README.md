@@ -1,83 +1,42 @@
-"# Multimodal-Fake-News-Detection" 
-Detect fake news by analyzing both text and images using deep learning techniques combining NLP and computer vision.
-
-
-## Image Download Script
-
-**`download_images.py`**
-
-- Reads dataset CSV with image URLs and labels.
-- Downloads images into separate folders by label.
-- Verifies images are not corrupted.
-- Logs success and failures, drops failed rows from dataset.
-- Outputs cleaned dataset CSV without failed images.
-
-**Usage:**
-
-```bash
-python scripts/download_images.py
-```
-
-## Resources
-
-### Dataset  
-We use the [FakeNewsNet](https://arxiv.org/abs/1809.01286) dataset as a base. Our cleaned and filtered data is available [here](https://drive.google.com/drive/folders/14LYqAASzauCwIpoa2nX-lr-qIKPZ1QY8?usp=sharing).  
-For the latest version of FakeNewsNet, please check: https://github.com/KaiDMML/FakeNewsNet.
-
-### Image Captioning Tool  
-We utilize the [BLIP (Bootstrapping Language-Image Pre-training)](https://github.com/salesforce/BLIP) model for image captioning. This tool generates descriptive captions from images, which are then used in our multimodal analysis.
-
-### Word Embedding  
-For word embeddings, we use the pre-trained [GloVe 840B 300d vectors](https://github.com/stanfordnlp/GloVe).  
-Due to the large size and processing time of the GloVe embeddings, we provide precomputed word maps and embedding results [here](https://drive.google.com/drive/folders/14LYqAASzauCwIpoa2nX-lr-qIKPZ1QY8?usp=sharing).  
+Got it! Here's an updated version of your README with a more concise and **English** version, without detailing each file’s functionality:
 
 ---
 
-## Image Captioning and Embedding Script
+# Multimodal Fake News Detection
 
-This script performs the following steps:
+This project detects fake news by analyzing both text and images using deep learning techniques, combining Natural Language Processing (NLP) and computer vision.
 
-1. Mounts Google Drive to access project data.
-2. Loads the filtered dataset CSV containing image metadata.
-3. Extracts preprocessed images from a ZIP archive.
-4. Uses the Salesforce BLIP model to generate captions for all images in the dataset.
-5. Saves the captions with labels into a CSV file and copies it back to Google Drive.
-6. Extracts GloVe embeddings and a precomputed word embedding file from ZIP archives.
-7. Loads GloVe embeddings into memory.
-8. Computes sentence-level embeddings for the generated captions by averaging GloVe word embeddings.
-9. Saves the caption embeddings as a NumPy array.
-10. Loads and cleans the caption CSV for further processing or merging.
+## Scripts
 
-**Requirements:**
+### 1. **`download_images.py`**
 
-- Python packages: `pandas`, `torch`, `transformers`, `Pillow`, `tqdm`, `numpy`
-- Google Drive access for input/output files
-- Pretrained models and embeddings as specified in the project
-
-**Usage:**
-
-Run this script in a Google Colab environment or any environment with access to the datasets and required libraries.
-
-## Early Fusion BERT Classifier Training
-
-This script trains an early fusion multimodal classifier using BERT embeddings on both news text and image captions. It:
-
-- Loads a merged dataset CSV with text, captions, and labels.
-- Preprocesses and splits data into training and validation sets.
-- Tokenizes text and captions using BERT tokenizer.
-- Implements a PyTorch Dataset and DataLoader for batching.
-- Defines an early fusion model that concatenates BERT embeddings of text and captions.
-- Trains the model using binary cross-entropy loss.
-- Evaluates on validation data.
-- Plots training/validation accuracy and loss.
-
-**Usage:**
-
-Run this script in an environment with PyTorch and Transformers installed:
-
-```bash
-python train_early_fusion_bert.py
+This script downloads images from URLs in the dataset, checks for corruption, and saves the cleaned data in a new CSV file.
 
 
-```bash
-python image_captioning_and_embedding.py
+### 2. **`image_captioning_and_embedding.py`**
+
+Generates captions for images using the BLIP model, extracts GloVe word embeddings, and computes sentence-level embeddings for the captions. Results are saved as CSV and NumPy files.
+
+
+### 3. **`train_early_fusion_bert.py`**
+
+Trains a multimodal classifier using BERT embeddings for both text and image captions, evaluates the model, and plots the training/validation metrics.
+
+
+---
+
+## Resources
+
+### Dataset
+
+We use the [FakeNewsNet dataset](https://arxiv.org/abs/1809.01286) as a base. Cleaned and filtered data is available [here](https://drive.google.com/drive/folders/14LYqAASzauCwIpoa2nX-lr-qIKPZ1QY8?usp=sharing).
+For the latest version of FakeNewsNet, visit: [FakeNewsNet GitHub](https://github.com/KaiDMML/FakeNewsNet).
+
+### Image Captioning Tool
+
+The project uses the [BLIP model](https://github.com/salesforce/BLIP) for generating captions from images.
+
+### Word Embedding
+
+For word embeddings, we use pre-trained [GloVe 840B 300d vectors](https://github.com/stanfordnlp/GloVe). Precomputed word maps and embedding results are available [here](https://drive.google.com/drive/folders/14LYqAASzauCwIpoa2nX-lr-qIKPZ1QY8?usp=sharing).
+
