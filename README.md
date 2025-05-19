@@ -21,7 +21,7 @@ python scripts/download_images.py
 ## Resources
 
 ### Dataset  
-We use the [FakeNewsNet](https://arxiv.org/abs/1809.01286) dataset as a base. Our cleaned and filtered data is available [here](https://drive.google.com/drive/folders/1tn7GA8WL9sF6mHD9k5CLx06Cr6EOspXs?usp=sharing).  
+We use the [FakeNewsNet](https://arxiv.org/abs/1809.01286) dataset as a base. Our cleaned and filtered data is available [here](https://drive.google.com/drive/folders/14LYqAASzauCwIpoa2nX-lr-qIKPZ1QY8?usp=sharing).  
 For the latest version of FakeNewsNet, please check: https://github.com/KaiDMML/FakeNewsNet.
 
 ### Image Captioning Tool  
@@ -29,7 +29,7 @@ We utilize the [BLIP (Bootstrapping Language-Image Pre-training)](https://github
 
 ### Word Embedding  
 For word embeddings, we use the pre-trained [GloVe 840B 300d vectors](https://github.com/stanfordnlp/GloVe).  
-Due to the large size and processing time of the GloVe embeddings, we provide precomputed word maps and embedding results [here](https://drive.google.com/drive/folders/1tn7GA8WL9sF6mHD9k5CLx06Cr6EOspXs?usp=sharing).  
+Due to the large size and processing time of the GloVe embeddings, we provide precomputed word maps and embedding results [here](https://drive.google.com/drive/folders/14LYqAASzauCwIpoa2nX-lr-qIKPZ1QY8?usp=sharing).  
 
 ---
 
