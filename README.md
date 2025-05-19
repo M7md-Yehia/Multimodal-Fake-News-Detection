@@ -32,3 +32,31 @@ For word embeddings, we use the pre-trained [GloVe 840B 300d vectors](https://gi
 Due to the large size and processing time of the GloVe embeddings, we provide precomputed word maps and embedding results [here](https://drive.google.com/drive/folders/1tn7GA8WL9sF6mHD9k5CLx06Cr6EOspXs?usp=sharing).  
 
 ---
+
+## Image Captioning and Embedding Script
+
+This script performs the following steps:
+
+1. Mounts Google Drive to access project data.
+2. Loads the filtered dataset CSV containing image metadata.
+3. Extracts preprocessed images from a ZIP archive.
+4. Uses the Salesforce BLIP model to generate captions for all images in the dataset.
+5. Saves the captions with labels into a CSV file and copies it back to Google Drive.
+6. Extracts GloVe embeddings and a precomputed word embedding file from ZIP archives.
+7. Loads GloVe embeddings into memory.
+8. Computes sentence-level embeddings for the generated captions by averaging GloVe word embeddings.
+9. Saves the caption embeddings as a NumPy array.
+10. Loads and cleans the caption CSV for further processing or merging.
+
+**Requirements:**
+
+- Python packages: `pandas`, `torch`, `transformers`, `Pillow`, `tqdm`, `numpy`
+- Google Drive access for input/output files
+- Pretrained models and embeddings as specified in the project
+
+**Usage:**
+
+Run this script in a Google Colab environment or any environment with access to the datasets and required libraries.
+
+```bash
+python image_captioning_and_embedding.py
