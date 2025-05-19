@@ -21,7 +21,7 @@ python scripts/download_images.py
 ## Resources
 
 ### Dataset  
-We use the [FakeNewsNet](https://arxiv.org/abs/1809.01286) dataset as a base. Our cleaned and filtered data is available [here](https://drive.google.com/drive/folders/1gSx4S9i6Haul4TQRkoNQtj3sRHVwGFQ3?usp=sharing).  
+We use the [FakeNewsNet](https://arxiv.org/abs/1809.01286) dataset as a base. Our cleaned and filtered data is available [here](https://drive.google.com/drive/folders/1tn7GA8WL9sF6mHD9k5CLx06Cr6EOspXs?usp=sharing).  
 For the latest version of FakeNewsNet, please check: https://github.com/KaiDMML/FakeNewsNet.
 
 ### Image Captioning Tool  
